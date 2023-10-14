@@ -1,6 +1,8 @@
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:dla_bz/config/routes/route_path.dart';
 import 'package:dla_bz/core/resources/styles.dart';
+import 'package:dla_bz/features/doctors/presentation/pages/select_doctor.dart';
 import 'package:dla_bz/features/doctors/presentation/widgets/w_doctor_items.dart';
 import 'package:flutter/material.dart';
 import '../../../../config/routes/router.gr.dart';
@@ -39,7 +41,7 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
               10,
               (index) => WDoctorItems(
                 onTap: () {
-                  context.router.push(SelectDoctor());
+                  context.router.pushNamed(RoutePath.selectDoctor);
                 },
               ),
             )
