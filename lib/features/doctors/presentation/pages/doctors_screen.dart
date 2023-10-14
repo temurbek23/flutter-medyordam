@@ -1,14 +1,9 @@
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dla_bz/config/routes/router.gr.dart';
-import 'package:dla_bz/core/resources/app_icons.dart';
 import 'package:dla_bz/core/resources/styles.dart';
 import 'package:dla_bz/features/doctors/presentation/widgets/w_doctor_items.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
+import '../../../../config/routes/router.gr.dart';
 import '../../../../core/resources/app_colors.dart';
 
 @RoutePage()

@@ -27,6 +27,9 @@ dependencies:
   syncfusion_flutter_charts: ^23.1.38
   syncfusion_flutter_datepicker: ^23.1.36
   percent_indicator: ^4.2.3
+  camera: ^0.10.5+5
+  permission_handler: ^11.0.1
+  video_player: ^2.7.2
 
   #  calendar_date_picker2: ^0.5.3
   intl_phone_number_input: ^0.7.3+1
