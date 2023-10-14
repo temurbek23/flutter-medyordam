@@ -95,14 +95,12 @@ class _AppMainScreenState extends State<AppMainScreen> {
                                     selectedIcon: AppIcons.home,
                                     label: "home".tr(),
                                     isActive: state.index == 0,
-                                    onTap: () => _openPage(RoutePath.dashboard)),
+                                    onTap: () => _openPage(RoutePath.doctor)),
                                 WBottomBarItem(
                                     selectedIcon: AppIcons.statistik,
                                     label: "statistics".tr(),
                                     isActive: state.index == 1,
                                     onTap: () => _openPage(RoutePath.help)),
-
-
                               ],
                             );
                           },

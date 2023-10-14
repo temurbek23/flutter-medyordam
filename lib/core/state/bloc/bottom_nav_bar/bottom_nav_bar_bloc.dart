@@ -38,7 +38,7 @@ class BottomNavBarBloc extends Bloc<BottomNavBarEvent, BottomNavBarState> {
 
   //
   final List<TabRouteData> routesData = [
-    const TabRouteData(path: RoutePath.dashboard, routeInfo: RootDoctor()),
+    const TabRouteData(path: RoutePath.doctor, routeInfo: RootDoctor()),
     const TabRouteData(path: RoutePath.help, routeInfo: RootHelp()),
 
   ];

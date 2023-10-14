@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import '../../../../core/resources/app_dimension.dart';
 
 @RoutePage()
-class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({super.key});
+class HelpScreen extends StatefulWidget {
+  const HelpScreen({super.key});
 
   @override
-  State<DashboardScreen> createState() => _DashboardScreenState();
+  State<HelpScreen> createState() => _HelpScreenState();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> with AppDimension {
+class _HelpScreenState extends State<HelpScreen> with AppDimension {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

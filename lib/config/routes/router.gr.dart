@@ -11,9 +11,9 @@
 import 'package:auto_route/auto_route.dart' as _i7;
 import 'package:dla_bz/features/chat/presentation/pages/chat_main_screen.dart'
     as _i6;
-import 'package:dla_bz/features/doctors/presentation/pages/doctors.dart' as _i3;
+import 'package:dla_bz/features/doctors/presentation/pages/doctors.dart' as _i2;
 import 'package:dla_bz/features/helps/presentation/pages/dashboard_screen.dart'
-    as _i2;
+    as _i3;
 import 'package:dla_bz/features/main/presentation/pages/app_main_screen.dart'
     as _i1;
 import 'package:dla_bz/features/main/presentation/pages/root/root_doctors.dart'
@@ -32,16 +32,16 @@ abstract class $AppRouter extends _i7.RootStackRouter {
         child: const _i1.AppMainScreen(),
       );
     },
-    DashboardRoute.name: (routeData) {
-      return _i7.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i2.DashboardScreen(),
-      );
-    },
     DoctorsRoute.name: (routeData) {
       return _i7.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.DoctorsScreen(),
+        child: const _i2.DoctorsScreen(),
+      );
+    },
+    HelpRoute.name: (routeData) {
+      return _i7.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i3.HelpScreen(),
       );
     },
     RootDoctor.name: (routeData) {
@@ -80,21 +80,7 @@ class AppMainRoute extends _i7.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.DashboardScreen]
-class DashboardRoute extends _i7.PageRouteInfo<void> {
-  const DashboardRoute({List<_i7.PageRouteInfo>? children})
-      : super(
-          DashboardRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'DashboardRoute';
-
-  static const _i7.PageInfo<void> page = _i7.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i3.DoctorsScreen]
+/// [_i2.DoctorsScreen]
 class DoctorsRoute extends _i7.PageRouteInfo<void> {
   const DoctorsRoute({List<_i7.PageRouteInfo>? children})
       : super(
@@ -103,6 +89,20 @@ class DoctorsRoute extends _i7.PageRouteInfo<void> {
         );
 
   static const String name = 'DoctorsRoute';
+
+  static const _i7.PageInfo<void> page = _i7.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i3.HelpScreen]
+class HelpRoute extends _i7.PageRouteInfo<void> {
+  const HelpRoute({List<_i7.PageRouteInfo>? children})
+      : super(
+          HelpRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HelpRoute';
 
   static const _i7.PageInfo<void> page = _i7.PageInfo<void>(name);
 }
