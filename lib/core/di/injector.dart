@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 import '../state/bloc/bottom_nav_bar/bottom_nav_bar_bloc.dart';
-import '../state/provider/them_provider.dart';
 
 class Injector extends StatelessWidget {
   final Widget child;
@@ -18,7 +17,6 @@ class Injector extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<AppBarProvider>(create: (_)=>AppBarProvider()),
-        ChangeNotifierProvider<ThemProvider>(create:(_)=>ThemProvider())
       ],
       child: MultiBlocProvider(providers: [
         BlocProvider<BottomNavBarBloc>(

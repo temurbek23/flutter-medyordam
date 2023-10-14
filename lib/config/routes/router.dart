@@ -35,5 +35,9 @@ class AppRouter extends $AppRouter {
             ),
           ],
         ),
+    AutoRoute(
+      page: HelpInfoRoute.page,
+      path: RoutePath.helpScreen,
+    )
       ];
 }

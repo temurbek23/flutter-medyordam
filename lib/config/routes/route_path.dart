@@ -6,7 +6,7 @@ class RoutePath {
   static const String doctor = "doctor";
   static const String doctorScreen = "doctor-screen";
   static const String help = "help";
-  static const String helpScreen = "help-screen";
+  static const String helpScreen = "/help-screen";
 
 
 }
