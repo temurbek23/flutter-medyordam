@@ -13,9 +13,14 @@ import 'package:dla_bz/features/chat/presentation/pages/chat_main_screen.dart'
     as _i7;
 import 'package:dla_bz/features/doctors/presentation/pages/doctors_screen.dart'
     as _i2;
+
 import 'package:dla_bz/features/helps/presentation/pages/help_info.dart' as _i3;
 import 'package:dla_bz/features/helps/presentation/pages/help_screen.dart'
     as _i4;
+import 'package:dla_bz/features/doctors/presentation/pages/select_doctor.dart'
+    as _i6;
+import 'package:dla_bz/features/helps/presentation/pages/dashboard_screen.dart'
+    as _i3;
 import 'package:dla_bz/features/main/presentation/pages/app_main_screen.dart'
     as _i1;
 import 'package:dla_bz/features/main/presentation/pages/root/root_doctors.dart'
@@ -64,6 +69,12 @@ abstract class $AppRouter extends _i8.RootStackRouter {
         child: const _i6.RootHelp(),
       );
     },
+    SelectDoctor.name: (routeData) {
+      return _i8.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i6.SelectDoctor(),
+      );
+    },
     VideoChatRoute.name: (routeData) {
       return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -99,6 +110,7 @@ class DoctorsRoute extends _i8.PageRouteInfo<void> {
   static const String name = 'DoctorsRoute';
 
   static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
+
 }
 
 /// generated route for
@@ -117,6 +129,7 @@ class HelpInfoRoute extends _i8.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.HelpScreen]
+
 class HelpRoute extends _i8.PageRouteInfo<void> {
   const HelpRoute({List<_i8.PageRouteInfo>? children})
       : super(
@@ -130,7 +143,9 @@ class HelpRoute extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
+
 /// [_i5.RootDoctor]
+
 class RootDoctor extends _i8.PageRouteInfo<void> {
   const RootDoctor({List<_i8.PageRouteInfo>? children})
       : super(
@@ -144,7 +159,9 @@ class RootDoctor extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
+
 /// [_i6.RootHelp]
+
 class RootHelp extends _i8.PageRouteInfo<void> {
   const RootHelp({List<_i8.PageRouteInfo>? children})
       : super(
@@ -155,6 +172,22 @@ class RootHelp extends _i8.PageRouteInfo<void> {
   static const String name = 'RootHelp';
 
   static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
+
+}
+
+/// generated route for
+/// [_i6.SelectDoctor]
+class SelectDoctor extends _i8.PageRouteInfo<void> {
+  const SelectDoctor({List<_i8.PageRouteInfo>? children})
+      : super(
+          SelectDoctor.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SelectDoctor';
+
+  static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
+
 }
 
 /// generated route for

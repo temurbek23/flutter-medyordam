@@ -31,6 +31,8 @@ class AppColors {
   static const Color cancel = Color(0xFFAFB1B9);
 
   static const Color C_171215 = Color(0xFF171215);
+  static const Color C_8B8B8B = Color(0xFF8B8B8B);
+  static const Color C_F4F4F4 = Color(0xFFF4F4F4);
   static const Color textColor = Color(0xFF171215);
   static const Color switchColor = Color(0xFFE9E9EA);
   static const Color  access = Color(0xFF2F3E4A);
