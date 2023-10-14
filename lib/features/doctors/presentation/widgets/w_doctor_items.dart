@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dla_bz/core/resources/app_images.dart';
+import 'package:dla_bz/core/resources/app_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../core/resources/app_colors.dart';
 import '../../../../core/resources/styles.dart';
 
@@ -58,8 +59,8 @@ class WDoctorItems extends StatelessWidget {
                       child: SizedBox(
                         width: 24,
                         height: 24,
-                        child: Image.asset(
-                          AppImages.call,
+                        child:SvgPicture.asset(
+                          AppIcons.call,
                         ),
                       ),
                     ),
@@ -69,8 +70,8 @@ class WDoctorItems extends StatelessWidget {
                       child: SizedBox(
                         width: 24,
                         height: 24,
-                        child: Image.asset(
-                          AppImages.video,
+                        child: SvgPicture.asset(
+                          AppIcons.video,
                         ),
                       ),
                     ),

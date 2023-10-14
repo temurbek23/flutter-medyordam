@@ -1,7 +1,10 @@
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/resources/app_colors.dart';
+import '../../../../core/resources/app_icons.dart';
 import '../../../../core/resources/styles.dart';
 @RoutePage()
 class HelpInfoScreen extends StatefulWidget {
@@ -18,11 +21,26 @@ class _HelpInfoScreenState extends State<HelpInfoScreen> {
     return  Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.white,
-        automaticallyImplyLeading: true,
+        automaticallyImplyLeading: false,
+
         elevation: 0.5,
-        title: Text(
-          'Birinchi tez yordam ro’yxati',
-          style: Styles.getTextStyle(fontWeight: FontWeight.w400,fontSize: 14),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            GestureDetector(
+              onTap: (){
+                context.router.pop();
+              },
+              child: SvgPicture.asset(
+                AppIcons.back,
+              ),
+            ),
+            const SizedBox(width: 16,),
+            Text(
+              'Birinchi tez yordam ro’yxati',
+              style: Styles.getTextStyle(fontWeight: FontWeight.w400,fontSize: 14),
+            ),
+          ],
         ),
       ),
       body: Column(

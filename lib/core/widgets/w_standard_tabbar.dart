@@ -34,14 +34,16 @@ class WStandardTabBar extends StatelessWidget {
           highlightColor: Colors.transparent,
         ),
         child: TabBar(
+
           controller: tabController,
-          labelColor: Colors.black,
+          labelColor: const Color(0xFF38A34B),
           indicatorSize: TabBarIndicatorSize.tab,
           labelStyle:
-              Styles.getTextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              Styles.getTextStyle(fontSize: 14, fontWeight: FontWeight.w500),
           indicatorWeight: 2,
           isScrollable: isScrollable,
-          unselectedLabelColor: AppColors.C999999,
+          indicatorColor: const Color(0xFF38A34B),
+          unselectedLabelColor:const Color(0xFF8B8B8B),
           tabs: tabs,
           splashBorderRadius: BorderRadius.circular(50),
           labelPadding:

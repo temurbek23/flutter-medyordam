@@ -34,6 +34,9 @@ class WBottomBarItem extends StatelessWidget {
             selectedIcon,
             width: 40,
             height: 30,
+            colorFilter: ColorFilter.mode(isActive
+                ? AppColors.primaryColor
+                : const Color(0xFF888B89), BlendMode.srcIn  ),
             fit: BoxFit.cover,
           ),
           const SizedBox(height: 8),

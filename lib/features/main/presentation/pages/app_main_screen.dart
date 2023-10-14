@@ -4,6 +4,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../config/routes/route_path.dart';
 import '../../../../core/di/locator.dart';
@@ -93,12 +94,12 @@ class _AppMainScreenState extends State<AppMainScreen> {
                               children: [
                                 WBottomBarItem(
                                     selectedIcon: AppIcons.mapDoctor,
-                                    label: "home".tr(),
+                                    label: "doctors".tr(),
                                     isActive: state.index == 0,
                                     onTap: () => _openPage(RoutePath.doctor)),
                                 WBottomBarItem(
                                     selectedIcon: AppIcons.healthiconsDoctorMale,
-                                    label: "statistics".tr(),
+                                    label: "helps".tr(),
                                     isActive: state.index == 1,
                                     onTap: () => _openPage(RoutePath.help)),
                               ],
@@ -112,6 +113,8 @@ class _AppMainScreenState extends State<AppMainScreen> {
                 floatingActionButton: FloatingActionButton(
                   onPressed: (){},
                   backgroundColor: AppColors.primaryColor,
+                  elevation: 0,
+                  child: SvgPicture.asset(AppIcons.biCameraFill),
                 ),
                 floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
               ),
