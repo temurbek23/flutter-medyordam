@@ -11,6 +11,7 @@ class Assets {
   static const String fontsGilroySemiBold = 'assets/fonts/Gilroy-SemiBold.ttf';
   static const String lottieSnkr = 'assets/lottie/snkr.json';
   static const String pngAllowLocation = 'assets/png/allow_location.png';
+  static const String pngCallP = 'assets/png/call_p.png';
   static const String pngEnglish = 'assets/png/english.png';
   static const String pngEspaniol = 'assets/png/espaniol.png';
   static const String pngLoginImg = 'assets/png/login_img.png';
@@ -24,10 +25,14 @@ class Assets {
   static const String pngSucces = 'assets/png/succes.png';
   static const String pngSupport = 'assets/png/support.png';
   static const String pngSwipe = 'assets/png/swipe.png';
+  static const String pngVideoP = 'assets/png/video_p.png';
   static const String pngVisaLogo = 'assets/png/visa_logo.png';
   static const String svgBiCameraFill = 'assets/svg/bi_camera_fill.svg';
+  static const String svgCall = 'assets/svg/call.svg';
+  static const String svgEpBack = 'assets/svg/ep_back.svg';
   static const String svgHealthiconsDoctorMale = 'assets/svg/healthicons_doctor_male.svg';
   static const String svgMapDoctor = 'assets/svg/map_doctor.svg';
+  static const String svgVideo = 'assets/svg/video.svg';
   static const String translationsEnUS = 'assets/translations/en-US.json';
 
 }

@@ -19,5 +19,7 @@ abstract class AppImages {
   static const shadow = "${_imgPath}shadow_img.png";
   static const settingTransparent = "${_imgPath}setting_tr.png";
   static const swipe = "${_imgPath}swipe.png";
+  static const call = "${_imgPath}call_p.png";
+  static const video = "${_imgPath}video_p.png";
 
 }
