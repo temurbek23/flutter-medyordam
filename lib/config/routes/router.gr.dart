@@ -11,7 +11,8 @@
 import 'package:auto_route/auto_route.dart' as _i7;
 import 'package:dla_bz/features/chat/presentation/pages/chat_main_screen.dart'
     as _i6;
-import 'package:dla_bz/features/doctors/presentation/pages/doctors.dart' as _i2;
+import 'package:dla_bz/features/doctors/presentation/pages/doctors_screen.dart'
+    as _i2;
 import 'package:dla_bz/features/helps/presentation/pages/dashboard_screen.dart'
     as _i3;
 import 'package:dla_bz/features/main/presentation/pages/app_main_screen.dart'

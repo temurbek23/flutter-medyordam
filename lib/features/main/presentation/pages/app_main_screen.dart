@@ -68,7 +68,7 @@ class _AppMainScreenState extends State<AppMainScreen> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Container(
-                      // height: 70,
+                      padding: const EdgeInsets.symmetric(vertical: 8),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         color: AppColors.white,
@@ -89,15 +89,15 @@ class _AppMainScreenState extends State<AppMainScreen> {
                           builder: (context, state) {
                             return Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 WBottomBarItem(
-                                    selectedIcon: AppIcons.home,
+                                    selectedIcon: AppIcons.mapDoctor,
                                     label: "home".tr(),
                                     isActive: state.index == 0,
                                     onTap: () => _openPage(RoutePath.doctor)),
                                 WBottomBarItem(
-                                    selectedIcon: AppIcons.statistik,
+                                    selectedIcon: AppIcons.healthiconsDoctorMale,
                                     label: "statistics".tr(),
                                     isActive: state.index == 1,
                                     onTap: () => _openPage(RoutePath.help)),
@@ -109,6 +109,11 @@ class _AppMainScreenState extends State<AppMainScreen> {
                     ),
                   ],
                 ),
+                floatingActionButton: FloatingActionButton(
+                  onPressed: (){},
+                  backgroundColor: AppColors.primaryColor,
+                ),
+                floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
               ),
             ),
           ),

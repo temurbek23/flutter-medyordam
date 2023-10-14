@@ -30,15 +30,7 @@ class WBackButton extends StatelessWidget {
             width: 24,
             height: 24,
             padding: const EdgeInsets.all(4),
-            child: SvgPicture.asset(
-              AppIcons.arrowLeft,
-              width: 16,
-              height: 16,
-              colorFilter: ColorFilter.mode(
-                isDark ? AppColors.white : AppColors.black,
-                BlendMode.srcIn,
-              ),
-            ),
+            child: const Icon(Icons.keyboard_arrow_left_outlined)
           ),
           const SizedBox(width: 4),
           Text(

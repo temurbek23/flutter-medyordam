@@ -19,7 +19,7 @@ class AppRouter extends $AppRouter {
                 children: [
                   AutoRoute(
                     page: DoctorsRoute.page,
-                    path: RoutePath.doctorScreen,
+                    path: '',
                   )
                 ]
             ),
@@ -27,8 +27,11 @@ class AppRouter extends $AppRouter {
               page: RootHelp.page,
               path: RoutePath.help,
               children: [
-                AutoRoute(page: HelpRoute.page,path: RoutePath.helpScreen)
-              ]
+              AutoRoute(
+                page: HelpRoute.page,
+                path: '',
+              )
+            ]
             ),
           ],
         ),

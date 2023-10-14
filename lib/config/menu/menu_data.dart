@@ -16,5 +16,5 @@ class MenuData {
 
 abstract class AppMenu {
 
-  static final logout = MenuData(icon: AppIcons.logout, text: "logout".tr());
+  // static final logout = MenuData(icon: AppIcons.logout, text: "logout".tr());
 }
