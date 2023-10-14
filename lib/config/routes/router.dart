@@ -21,10 +21,7 @@ class AppRouter extends $AppRouter {
                     page: DoctorsRoute.page,
                     path: '',
                   ),
-                  AutoRoute(
-                    page: SelectDoctor.page,
-                    path: RoutePath.selectDoctor,
-                  ),
+
                 ]
             ),
             AutoRoute(
@@ -50,6 +47,10 @@ class AppRouter extends $AppRouter {
     AutoRoute(
       page: HelpInfoRoute.page,
       path: RoutePath.helpScreen,
-    )
+    ),
+    AutoRoute(
+      page: SelectDoctor.page,
+      path: RoutePath.selectDoctor,
+    ),
       ];
 }
