@@ -37,6 +37,14 @@ class AppRouter extends $AppRouter {
               )
             ]
             ),
+            AutoRoute(
+                page: CameraRoute.page,
+                path: RoutePath.cameraScreen,
+                children: [
+
+                ]
+            ),
+
           ],
         ),
     AutoRoute(
