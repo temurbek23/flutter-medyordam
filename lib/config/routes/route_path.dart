@@ -4,7 +4,7 @@ class RoutePath {
   static const String menu = "/menu";
 
   static const String doctor = "doctor";
-  static const String doctorScreen = "doctor-screen";
+  static const String cameraScreen = "camera-screen";
   static const String help = "help";
   static const String selectDoctor = "select-doctor";
   static const String helpScreen = "/help-screen";
