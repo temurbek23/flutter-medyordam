@@ -1,8 +1,6 @@
-import 'package:dla_bz/core/state/provider/them_provider.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 import 'config/routes/router.dart';
 import 'core/di/injector.dart';
 import 'core/di/locator.dart';
@@ -34,8 +32,7 @@ class MyApp extends StatelessWidget {
   MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return Consumer(
-      builder: (context,ThemProvider themeNotifier,child){
+
         return MaterialApp.router(
           locale: context.locale,
           supportedLocales: context.supportedLocales,
@@ -45,7 +42,6 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           routerConfig: _router.config(),
         );
-      },
-    );
+
   }
 }
