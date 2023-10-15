@@ -10,6 +10,8 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i9;
 import 'package:dla_bz/features/camera/camera_screen.dart' as _i2;
+import 'package:dla_bz/features/doctors/data/dto/doctor_dto/doctor_dto.dart'
+    as _i11;
 import 'package:dla_bz/features/doctors/presentation/pages/doctors_screen.dart'
     as _i3;
 import 'package:dla_bz/features/doctors/presentation/pages/select_doctor.dart'
@@ -23,6 +25,7 @@ import 'package:dla_bz/features/main/presentation/pages/root/root_doctors.dart'
     as _i6;
 import 'package:dla_bz/features/main/presentation/pages/root/root_help.dart'
     as _i7;
+import 'package:flutter/material.dart' as _i10;
 
 abstract class $AppRouter extends _i9.RootStackRouter {
   $AppRouter({super.navigatorKey});
@@ -71,10 +74,14 @@ abstract class $AppRouter extends _i9.RootStackRouter {
         child: const _i7.RootHelp(),
       );
     },
-    SelectDoctor.name: (routeData) {
+    SelectDoctorRoute.name: (routeData) {
+      final args = routeData.argsAs<SelectDoctorRouteArgs>();
       return _i9.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i8.SelectDoctor(),
+        child: _i8.SelectDoctorScreen(
+          key: args.key,
+          data: args.data,
+        ),
       );
     },
   };
@@ -179,15 +186,39 @@ class RootHelp extends _i9.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i8.SelectDoctor]
-class SelectDoctor extends _i9.PageRouteInfo<void> {
-  const SelectDoctor({List<_i9.PageRouteInfo>? children})
-      : super(
-          SelectDoctor.name,
+/// [_i8.SelectDoctorScreen]
+class SelectDoctorRoute extends _i9.PageRouteInfo<SelectDoctorRouteArgs> {
+  SelectDoctorRoute({
+    _i10.Key? key,
+    required _i11.DoctorDto data,
+    List<_i9.PageRouteInfo>? children,
+  }) : super(
+          SelectDoctorRoute.name,
+          args: SelectDoctorRouteArgs(
+            key: key,
+            data: data,
+          ),
           initialChildren: children,
         );
 
-  static const String name = 'SelectDoctor';
+  static const String name = 'SelectDoctorRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static const _i9.PageInfo<SelectDoctorRouteArgs> page =
+      _i9.PageInfo<SelectDoctorRouteArgs>(name);
+}
+
+class SelectDoctorRouteArgs {
+  const SelectDoctorRouteArgs({
+    this.key,
+    required this.data,
+  });
+
+  final _i10.Key? key;
+
+  final _i11.DoctorDto data;
+
+  @override
+  String toString() {
+    return 'SelectDoctorRouteArgs{key: $key, data: $data}';
+  }
 }

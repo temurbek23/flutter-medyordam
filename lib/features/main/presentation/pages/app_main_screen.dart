@@ -1,12 +1,11 @@
 
-
 import 'package:auto_route/auto_route.dart';
+import 'package:dla_bz/config/routes/router.gr.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../../../config/routes/route_path.dart';
 import '../../../../core/di/locator.dart';
 import '../../../../core/resources/app_colors.dart';
@@ -93,8 +92,7 @@ class _AppMainScreenState extends State<AppMainScreen> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-
-        WBottomBarItem( selectedIcon: AppIcons.healthiconsDoctorMale,
+                                WBottomBarItem( selectedIcon: AppIcons.healthiconsDoctorMale,
                                     label: "doctors".tr(),
                                     isActive: state.index == 0,
                                     onTap: () => _openPage(RoutePath.doctor)),
@@ -113,10 +111,9 @@ class _AppMainScreenState extends State<AppMainScreen> {
                 ),
                 floatingActionButton: FloatingActionButton(
                   onPressed: (){
-                    // context.router.push(const CameraRoute());
+                    context.router.push(const CameraRoute());
                   },
                   backgroundColor: AppColors.primaryColor,
-
                   elevation: 0,
                   child: SvgPicture.asset(AppIcons.biCameraFill),
 

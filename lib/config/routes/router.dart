@@ -49,7 +49,7 @@ class AppRouter extends $AppRouter {
       path: RoutePath.helpScreen,
     ),
     AutoRoute(
-      page: SelectDoctor.page,
+      page: SelectDoctorRoute.page,
       path: RoutePath.selectDoctor,
     ),
       ];
