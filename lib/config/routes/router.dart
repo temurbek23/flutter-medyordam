@@ -34,14 +34,6 @@ class AppRouter extends $AppRouter {
               )
             ]
             ),
-            AutoRoute(
-                page: CameraRoute.page,
-                path: RoutePath.cameraScreen,
-                children: [
-
-                ]
-            ),
-
           ],
         ),
     AutoRoute(
@@ -49,8 +41,15 @@ class AppRouter extends $AppRouter {
       path: RoutePath.helpScreen,
     ),
     AutoRoute(
-      page: SelectDoctor.page,
+      page: SelectDoctorRoute.page,
       path: RoutePath.selectDoctor,
+    ),
+    AutoRoute(
+        page: CameraRoute.page,
+        path: RoutePath.cameraScreen,
+        children: [
+
+        ]
     ),
       ];
 }

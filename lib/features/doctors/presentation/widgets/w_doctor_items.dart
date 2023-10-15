@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dla_bz/core/resources/app_icons.dart';
+import 'package:dla_bz/features/doctors/data/dto/doctor_dto/doctor_dto.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../core/resources/app_colors.dart';
@@ -7,8 +8,8 @@ import '../../../../core/resources/styles.dart';
 
 class WDoctorItems extends StatelessWidget {
   final GestureTapCallback onTap;
-
-  const WDoctorItems({super.key, required this.onTap});
+  final DoctorDto data;
+  const WDoctorItems({super.key, required this.onTap, required this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,8 @@ class WDoctorItems extends StatelessWidget {
                       width: 40,
                       child: CircleAvatar(
                         backgroundImage: CachedNetworkImageProvider(
-                            "https://img.freepik.com/free-photo/attractive-young-male-nutriologist-lab-coat-smiling-against-white-background_662251-2960.jpg"),
+                          "https://img.freepik.com/free-photo/woman-doctor-wearing-lab-coat-with-stethoscope-isolated_1303-29791.jpg"
+                        ),
                       ),
                     ),
                     const SizedBox(width: 12),
@@ -37,8 +39,7 @@ class WDoctorItems extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "Albert Flores",
+                        Text("${data.firstname} ${data.lastname}",
                           style: Styles.getTextStyle(
                               fontSize: 16, fontWeight: FontWeight.w500),
                         ),

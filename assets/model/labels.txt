@@ -1,0 +1,4 @@
+0 white_spots
+1 acne
+2 cut
+3 burnt
