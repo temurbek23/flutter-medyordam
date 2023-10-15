@@ -30,6 +30,7 @@ dependencies:
   camera: ^0.10.5+5
   flutter_webrtc: ^0.9.45
   web_socket_channel: ^2.4.0
+  tflite_v2: ^1.0.0
 
   #  calendar_date_picker2: ^0.5.3
   intl_phone_number_input: ^0.7.3+1
@@ -84,6 +85,7 @@ flutter:
     - assets/svg/
     - assets/translations/
     - assets/lottie/
+    - assets/model/
 
   fonts:
     - family: Gilroy

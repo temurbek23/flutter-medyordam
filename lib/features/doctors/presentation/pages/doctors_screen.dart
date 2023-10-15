@@ -1,11 +1,10 @@
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:dla_bz/config/routes/route_path.dart';
 import 'package:dla_bz/core/resources/styles.dart';
-import 'package:dla_bz/features/doctors/presentation/pages/select_doctor.dart';
 import 'package:dla_bz/features/doctors/presentation/widgets/w_doctor_items.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tflite_v2/tflite_v2.dart';
 import '../../../../config/routes/router.gr.dart';
 import '../../../../core/resources/app_colors.dart';
 import '../state/doctor_bloc/doctor_bloc.dart';
@@ -22,7 +21,18 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
   @override
   void initState() {
     context.read<DoctorBloc>().add(DoctorLoading());
+    loadModel();
     super.initState();
+  }
+
+  Future<void> loadModel() async {
+    String? res = await Tflite.loadModel(
+      model: "assets/model_unquant.tflite",
+      labels: "assets/labels.txt",
+      numThreads: 1,
+      isAsset: true,
+      useGpuDelegate: false,
+    );
   }
 
   @override

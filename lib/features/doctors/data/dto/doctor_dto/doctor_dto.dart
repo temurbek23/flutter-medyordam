@@ -1,3 +1,4 @@
+import 'package:dla_bz/features/doctors/data/dto/doctor_dto/professions_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'doctor_dto.g.dart';
 
@@ -14,6 +15,8 @@ class DoctorDto {
   final String? practice;
   final String? residency;
   final String? photo;
+  final List<ProfessionsDto> professions;
+  final String practice_in_years;
 
   DoctorDto({
     required this.photo,
@@ -26,7 +29,9 @@ class DoctorDto {
     required this.firstname,
     required this.lastname,
     required this.practice,
-    required this.residency
+    required this.residency,
+    required this.professions,
+    required this.practice_in_years
   });
 
   factory DoctorDto.fromJson(Map<String,dynamic> json) => _$DoctorDtoFromJson(json);

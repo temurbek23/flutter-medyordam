@@ -1,6 +1,8 @@
 import 'package:auto_route/annotations.dart';
-import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:tflite_v2/tflite_v2.dart';
+import '../../core/resources/app_colors.dart';
 
 @RoutePage()
 class CameraScreen extends StatefulWidget {
@@ -11,100 +13,55 @@ class CameraScreen extends StatefulWidget {
 }
 
 class _CameraScreenState extends State<CameraScreen> {
-  late List<CameraDescription> cameras;
-  late CameraController cameraController;
-  int direction = 0;
-
   @override
   void initState() {
-    startCamera(direction);
+    loadModel();
     super.initState();
   }
 
-  @override
-  void dispose() {
-    cameraController.dispose();
-    super.dispose();
+  Future<void> loadModel() async {
+    String? res = await Tflite.loadModel(
+      model: "assets/model/model_unquant.tflite",
+      labels: "assets/model/labels.txt",
+      numThreads: 1,
+      isAsset: true,
+      useGpuDelegate: false,
+    );
+  }
+
+  void camera() async {
+    final image = await ImagePicker().pickImage(
+      source: ImageSource.camera,
+    );
+    var recognitions = await Tflite.runModelOnImage(
+      path: image?.path ?? "",
+      imageMean: 127.5,
+      imageStd: 127.5,
+      threshold: 0.2,
+      numResults: 10,
+    );
+    final value = recognitions?.firstOrNull;
+    if (value != null) {
+      String? label = value['label'].toString();
+      final index = label.indexOf(' ');
+      label = label.substring(index + 1, label.length);
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    if (cameraController.value.isInitialized) {
-      return Scaffold(
-        body: Stack(
-          children: [
-            CameraPreview(cameraController),
-            GestureDetector(
-              onTap: () {
-                setState(() {
-                  direction  = direction == 0 ? 1:0;
-                  startCamera(direction);
-                });
-              },
-              child: button(
-                Icons.flip_camera_ios_outlined,
-                Alignment.bottomLeft,
-              ),
-            ),
-            GestureDetector(
-              onTap: (){
-                cameraController.takePicture().then((XFile? file) => {
-                  if(mounted){
-                    if(file != null){
-                      print("${file.path}")
-                    }
-                  }
-                });
-              },
-              child: button(
-                Icons.camera_alt_outlined,
-                Alignment.bottomCenter,
-              ),
-            ),
-          ],
-        ),
-      );
-    } else {
-      return SizedBox();
-    }
-  }
-
-  Widget button(IconData icon, Alignment alignment) {
-    return Align(
-      alignment: alignment,
-      child: Container(
-        margin: EdgeInsets.only(left: 20, bottom: 20),
-        height: 50,
-        width: 50,
-        decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: Colors.white,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black26,
-                offset: Offset(2, 2),
-                blurRadius: 10,
-              )
-            ]),
-        child: Center(
-          child: Icon(
-            icon,
-            color: Colors.black54,
-          ),
+    return Scaffold(
+      body: Column(),
+      backgroundColor: AppColors.white,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: FloatingActionButton(
+          onPressed: camera,
+          backgroundColor: AppColors.primaryColor,
+          elevation: 0,
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
-  }
-
-  void startCamera(int direction) async {
-    cameras = await availableCameras();
-    cameraController =
-        CameraController(cameras[0], ResolutionPreset.high, enableAudio: true);
-    await cameraController.initialize().then((value) {
-      if (!mounted) {
-        return;
-      }
-      setState(() {});
-    }).catchError((e) {});
   }
 }

@@ -33,6 +33,7 @@ class _SelectDoctorScreenState extends State<SelectDoctorScreen>
     super.initState();
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,7 +113,7 @@ class _SelectDoctorScreenState extends State<SelectDoctorScreen>
                       left: 20,
                       right: 20,
                       child: WButton(
-                        text: "15+ years of experience",
+                        text: "${widget.data.practice_in_years}+ years of experience",
                         onTap: () {},
                         borderRadius: 40,
                       ))
@@ -137,12 +138,7 @@ class _SelectDoctorScreenState extends State<SelectDoctorScreen>
             const SizedBox(
               height: 12,
             ),
-            const WChipGroup(items: [
-              "Dermatology",
-              "Cosmetic Dermatology",
-              "Teledermatology",
-              "Mohs Surgery",
-            ]),
+            WChipGroup(items: widget.data.professions),
             const SizedBox(
               height: 8,
             ),

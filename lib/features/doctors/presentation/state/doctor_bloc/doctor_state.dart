@@ -4,6 +4,7 @@ part of 'doctor_bloc.dart';
 abstract class DoctorState {}
 
 class DoctorInitial extends DoctorState {}
+class DoctorDef extends DoctorState {}
 class DoctorLoaded extends DoctorState {
   final DoctorResponseDto data;
 

@@ -1,8 +1,9 @@
 import 'package:dla_bz/core/widgets/w_removable_chip.dart';
+import 'package:dla_bz/features/doctors/data/dto/doctor_dto/professions_dto.dart';
 import 'package:flutter/material.dart';
 
 class WChipGroup extends StatefulWidget {
-  final List<String> items;
+  final List<ProfessionsDto> items;
 
   const WChipGroup({
     Key? key,
@@ -14,7 +15,7 @@ class WChipGroup extends StatefulWidget {
 }
 
 class _WChipGroupState extends State<WChipGroup> {
-  List<String> _items = [];
+  List<ProfessionsDto> _items = [];
 
   @override
   void initState() {
@@ -31,7 +32,7 @@ class _WChipGroupState extends State<WChipGroup> {
       children: List.generate(
           _items.length,
           (index) => WRemovableChip(
-                title: _items[index],
+                title: _items[index].name,
                 onCloseTap: () {
                   _items.removeAt(index);
                   setState(() {});
