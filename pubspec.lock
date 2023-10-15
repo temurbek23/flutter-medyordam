@@ -637,14 +637,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.18.1"
-  intl_phone_field:
-    dependency: "direct main"
-    description:
-      name: intl_phone_field
-      sha256: "73819d3dfcb68d2c85663606f6842597c3ddf6688ac777f051b17814fe767bbf"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.2.0"
   intl_phone_number_input:
     dependency: "direct main"
     description:
@@ -853,6 +845,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.1"
+
   percent_indicator:
     dependency: "direct main"
     description:
@@ -861,14 +854,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.3"
-  petitparser:
-    dependency: transitive
-    description:
-      name: petitparser
-      sha256: cb3798bef7fc021ac45b308f4b51208a152792445cce0448c9a4ba5879dd8750
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.4.0"
   platform:
     dependency: transitive
     description:
@@ -973,6 +958,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.27.7"
+  sdp_transform:
+    dependency: "direct main"
+    description:
+      name: sdp_transform
+      sha256: "73e412a5279a5c2de74001535208e20fff88f225c9a4571af0f7146202755e45"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.2"
   shared_preferences:
     dependency: "direct main"
     description:
@@ -1138,30 +1131,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
-  syncfusion_flutter_charts:
-    dependency: "direct main"
-    description:
-      name: syncfusion_flutter_charts
-      sha256: "40ee155cded99fa4f5abd3aa707e86662ee663d55cf10102bccd91a1094ef8bb"
-      url: "https://pub.dev"
-    source: hosted
-    version: "23.1.40"
-  syncfusion_flutter_core:
-    dependency: transitive
-    description:
-      name: syncfusion_flutter_core
-      sha256: "164a66d2a7fa9972e2a4767fbbf9f42f9fab3fd3c4149a6db72f846d85686f86"
-      url: "https://pub.dev"
-    source: hosted
-    version: "23.1.40"
-  syncfusion_flutter_datepicker:
-    dependency: "direct main"
-    description:
-      name: syncfusion_flutter_datepicker
-      sha256: "0331e99f667f2e1bfdd006c77b5fde131081c28e9c5094fce0ba16e2d9545c24"
-      url: "https://pub.dev"
-    source: hosted
-    version: "23.1.40"
   synchronized:
     dependency: transitive
     description:
