@@ -14,6 +14,7 @@ import 'package:dla_bz/features/doctors/presentation/pages/doctors_screen.dart'
     as _i3;
 import 'package:dla_bz/features/doctors/presentation/pages/select_doctor.dart'
     as _i8;
+import 'package:dla_bz/features/helps/data/help.dart' as _i11;
 import 'package:dla_bz/features/helps/presentation/pages/help_info.dart' as _i4;
 import 'package:dla_bz/features/helps/presentation/pages/help_screen.dart'
     as _i5;
@@ -23,6 +24,7 @@ import 'package:dla_bz/features/main/presentation/pages/root/root_doctors.dart'
     as _i6;
 import 'package:dla_bz/features/main/presentation/pages/root/root_help.dart'
     as _i7;
+import 'package:flutter/material.dart' as _i10;
 
 abstract class $AppRouter extends _i9.RootStackRouter {
   $AppRouter({super.navigatorKey});
@@ -48,9 +50,13 @@ abstract class $AppRouter extends _i9.RootStackRouter {
       );
     },
     HelpInfoRoute.name: (routeData) {
+      final args = routeData.argsAs<HelpInfoRouteArgs>();
       return _i9.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i4.HelpInfoScreen(),
+        child: _i4.HelpInfoScreen(
+          key: args.key,
+          help: args.help,
+        ),
       );
     },
     HelpRoute.name: (routeData) {
@@ -124,16 +130,40 @@ class DoctorsRoute extends _i9.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.HelpInfoScreen]
-class HelpInfoRoute extends _i9.PageRouteInfo<void> {
-  const HelpInfoRoute({List<_i9.PageRouteInfo>? children})
-      : super(
+class HelpInfoRoute extends _i9.PageRouteInfo<HelpInfoRouteArgs> {
+  HelpInfoRoute({
+    _i10.Key? key,
+    required _i11.Help help,
+    List<_i9.PageRouteInfo>? children,
+  }) : super(
           HelpInfoRoute.name,
+          args: HelpInfoRouteArgs(
+            key: key,
+            help: help,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'HelpInfoRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static const _i9.PageInfo<HelpInfoRouteArgs> page =
+      _i9.PageInfo<HelpInfoRouteArgs>(name);
+}
+
+class HelpInfoRouteArgs {
+  const HelpInfoRouteArgs({
+    this.key,
+    required this.help,
+  });
+
+  final _i10.Key? key;
+
+  final _i11.Help help;
+
+  @override
+  String toString() {
+    return 'HelpInfoRouteArgs{key: $key, help: $help}';
+  }
 }
 
 /// generated route for
